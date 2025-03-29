@@ -7,6 +7,19 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@hono/zod-validator':
+        specifier: ^0.4.3
+        version: 0.4.3(hono@4.7.5)(zod@3.24.2)
+      agents:
+        specifier: ^0.0.44
+        version: 0.0.44(@cloudflare/workers-types@4.20250327.0)
+      hono:
+        specifier: ^4.7.5
+        version: 4.7.5
+      zod:
+        specifier: ^3.24.2
+        version: 3.24.2
     devDependencies:
       '@cloudflare/vitest-pool-workers':
         specifier: ^0.7.5
@@ -575,6 +588,12 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
+  '@hono/zod-validator@0.4.3':
+    resolution: {integrity: sha512-xIgMYXDyJ4Hj6ekm9T9Y27s080Nl9NXHcJkOvkXPhubOLj8hZkOL8pDnnXfvCf5xEE8Q4oMFenQUZZREUY2gqQ==}
+    peerDependencies:
+      hono: '>=3.9.0'
+      zod: ^3.19.1
+
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -831,6 +850,9 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  agents@0.0.44:
+    resolution: {integrity: sha512-rplum75tKVdlJWt39+J6SLkyZKBVp5XpXXrHTLk5rkNUkbpVLvIY1al4v5QrTLYI0Ljkzd34Ll3Htzek7yhfbA==}
+
   as-table@1.0.55:
     resolution: {integrity: sha512-xvsWESUJn0JN421Xb9MQw6AsMHRCUknCe0Wjlxvjud80mU4E6hQf1A6NzQKcYNmYw62MfzEtXc+badstZP3JpQ==}
 
@@ -876,6 +898,10 @@ packages:
   cookie@0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
     engines: {node: '>= 0.6'}
+
+  cron-schedule@5.0.4:
+    resolution: {integrity: sha512-nH0a49E/kSVk6BeFgKZy4uUsy6D2A16p120h5bYD9ILBhQu7o2sJFH+WI4R731TSBQ0dB1Ik7inB/dRAB4C8QQ==}
+    engines: {node: '>=18'}
 
   data-uri-to-buffer@2.0.2:
     resolution: {integrity: sha512-ND9qDTLc6diwj+Xe5cdAgVTbLVdXbtxTJRXRhli8Mowuaan+0EJOtdqJ0QCHNSSPyoXGx9HX2/VMnKeC34AChA==}
@@ -931,6 +957,10 @@ packages:
   estree-walker@3.0.3:
     resolution: {integrity: sha512-7RUKfXgSMMkzt6ZuXmqapOurLGPPfgj6l9uRZ7lRGolvk0y2yocc35LdcxKC5PQZdn2DMqioAQ2NoWcrTKmm6g==}
 
+  event-target-shim@6.0.2:
+    resolution: {integrity: sha512-8q3LsZjRezbFZ2PN+uP+Q7pnHUMmAOziU2vA2OwoFaKIXxlxl38IylhSSgUorWu/rf4er67w0ikBqjBFk/pomA==}
+    engines: {node: '>=10.13.0'}
+
   exit-hook@2.2.1:
     resolution: {integrity: sha512-eNTPlAD67BmP31LDINZ3U7HSF8l57TxOY2PmBJ1shpCvpnxBF93mWCE8YHBnXs8qiUZJc9WDcWIeC3a2HIAMfw==}
     engines: {node: '>=6'}
@@ -952,6 +982,10 @@ packages:
 
   glob-to-regexp@0.4.1:
     resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
+
+  hono@4.7.5:
+    resolution: {integrity: sha512-fDOK5W2C1vZACsgLONigdZTRZxuBqFtcKh7bUQ5cVSbwI2RWjloJDcgFOVzbQrlI6pCmhlTsVYZ7zpLj4m4qMQ==}
+    engines: {node: '>=16.9.0'}
 
   is-arrayish@0.3.2:
     resolution: {integrity: sha512-eVRqCvVlZbuw3GrM63ovNSNAeA1K16kaR/LRY/92w0zxQ5/1YzwblUX652i4Xs9RwAGjW9d9y6X88t8OaAJfWQ==}
@@ -992,8 +1026,21 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  nanoid@5.1.5:
+    resolution: {integrity: sha512-Ir/+ZpE9fDsNH0hQ3C68uyThDXzYcim2EqcZ8zn8Chtt1iylPT9xXJB0kPCnqzgcEGikO9RxSrh63MsmVCU7Fw==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+
   ohash@2.0.11:
     resolution: {integrity: sha512-RdR9FQrFwNBNXAr4GixM8YaRZRJ5PUWbKYbE5eOsrwAjJW0q2REGcf79oYPsLyskQCZG1PLN+S/K1V00joZAoQ==}
+
+  partyserver@0.0.66:
+    resolution: {integrity: sha512-GyC1uy4dvC4zPkwdzHqCkQ1J1CMiI0swIJQ0qqsJh16WNkEo5QHuU3l3ikLO8t+Yq0cRr0qO8++xbr11h+107w==}
+    peerDependencies:
+      '@cloudflare/workers-types': ^4.20240729.0
+
+  partysocket@1.1.2:
+    resolution: {integrity: sha512-vWyxg0dYJewBsT6BaYkq+DEavYw+N/8J0jUXYSuZRRJdnmMJY+rkCg19t/8c3pTSyg8FjJH8VzIaHBhFMQRDIw==}
 
   path-to-regexp@6.3.0:
     resolution: {integrity: sha512-Yhpw4T9C6hPpgPeA28us07OJeqZ5EzQTkbfwuhsUg0c237RomFoETJgmp2sa3F/41gfLE6G5cqcYwznmeEeOlQ==}
@@ -1547,6 +1594,11 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
+  '@hono/zod-validator@0.4.3(hono@4.7.5)(zod@3.24.2)':
+    dependencies:
+      hono: 4.7.5
+      zod: 3.24.2
+
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
       '@img/sharp-libvips-darwin-arm64': 1.0.4
@@ -1737,6 +1789,15 @@ snapshots:
 
   acorn@8.14.0: {}
 
+  agents@0.0.44(@cloudflare/workers-types@4.20250327.0):
+    dependencies:
+      cron-schedule: 5.0.4
+      nanoid: 5.1.5
+      partyserver: 0.0.66(@cloudflare/workers-types@4.20250327.0)
+      partysocket: 1.1.2
+    transitivePeerDependencies:
+      - '@cloudflare/workers-types'
+
   as-table@1.0.55:
     dependencies:
       printable-characters: 1.0.42
@@ -1782,6 +1843,8 @@ snapshots:
     optional: true
 
   cookie@0.5.0: {}
+
+  cron-schedule@5.0.4: {}
 
   data-uri-to-buffer@2.0.2: {}
 
@@ -1889,6 +1952,8 @@ snapshots:
     dependencies:
       '@types/estree': 1.0.7
 
+  event-target-shim@6.0.2: {}
+
   exit-hook@2.2.1: {}
 
   expect-type@1.2.0: {}
@@ -1904,6 +1969,8 @@ snapshots:
       source-map: 0.6.1
 
   glob-to-regexp@0.4.1: {}
+
+  hono@4.7.5: {}
 
   is-arrayish@0.3.2:
     optional: true
@@ -1960,7 +2027,18 @@ snapshots:
 
   nanoid@3.3.11: {}
 
+  nanoid@5.1.5: {}
+
   ohash@2.0.11: {}
+
+  partyserver@0.0.66(@cloudflare/workers-types@4.20250327.0):
+    dependencies:
+      '@cloudflare/workers-types': 4.20250327.0
+      nanoid: 5.1.5
+
+  partysocket@1.1.2:
+    dependencies:
+      event-target-shim: 6.0.2
 
   path-to-regexp@6.3.0: {}
 
